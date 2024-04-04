@@ -1,0 +1,38 @@
+.form-send-tweet {
+  background-color: #fff;
+  border: 3px solid hsl(0, 3%, 56%);
+  padding: 20px;
+  width: 600px;
+
+  &_tittle {
+    margin: 0 !important;
+    font-size: medium;
+  }
+
+  &_form {
+    .MuiFormControl-root {
+      width: 100%;
+      .MuiInputBase-root {
+        border-radius: 0px;
+        .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+          border-color: black;
+          border-top: #fff;
+          border-left: #fff;
+          border-right: #fff;
+          border-bottom: 4%;
+        }
+      }
+    }
+
+    &-name {
+      width: 50% !important;
+    }
+
+    &-textarea {
+      width: 100%;
+    }
+    Button {
+      color: black;
+    }
+  }
+}
