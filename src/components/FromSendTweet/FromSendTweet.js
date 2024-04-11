@@ -6,12 +6,12 @@ import { FormControl, FormGroup, TextField, Button } from "@mui/material";
 import { Twitter } from "@mui/icons-material";
 
 export default function FromSendTweet(props) {
-  const { sendTweet } = props;
+  const { sendTweet, valueEditTweet, value } = props;
   const [formValue, setFormValue] = useState({
     name: "",
     tweet: "",
   });
-
+  console.log(value);
   //Dudas
   const onFormChange = (event) => {
     setFormValue({
