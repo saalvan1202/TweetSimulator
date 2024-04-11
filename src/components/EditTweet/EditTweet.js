@@ -6,10 +6,14 @@ import SendTweet from "../sendTweet/SendTweet";
 
 export default function EditTweet(props) {
   const { editTweet, index, valueEditTweet } = props;
+  const fnEditTweet = () => {
+    editTweet();
+    valueEditTweet(index);
+  };
   return (
     <IconButton
       onClick={() => {
-        editTweet, valueEditTweet(index);
+        fnEditTweet();
       }}
     >
       <EditIcon className="edit" />

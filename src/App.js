@@ -25,7 +25,6 @@ function App() {
     setAlltTweets(allTweetArray);
     setRecargarTweet(false);
   }, [recargarTweet]);
-  console.log(allTweet);
   const deleteTweet = (index) => {
     allTweet.splice(index, 1);
     setAlltTweets(allTweet);
@@ -40,7 +39,16 @@ function App() {
   const closeEdit = () => {
     return setOpenEdit(false);
   };
-  const valueEditTweet = (index) => {};
+  const valueEditTweet = (index) => {
+    const value = allTweet[index];
+    setEditTweet(value);
+  };
+
+  const [EditTweet, setEditTweet] = useState([]);
+  useEffect(() => {
+    const val = valueEditTweet();
+    setEditTweet(val);
+  }, []);
   return (
     <Container className="tweets-simulator" maxWidth={false}>
       <Header />
@@ -55,6 +63,7 @@ function App() {
         deleteTweet={deleteTweet}
         editTweet={editTweet}
         valueEditTweet={valueEditTweet}
+        value={EditTweet}
       />
       <Snackbar
         anchorOrigin={{

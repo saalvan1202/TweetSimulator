@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid";
 import Tweet from "../Tweet/Tweet";
 
 export default function ListTweet(props) {
-  const { allTweet, deleteTweet, editTweet, valueEditTweet } = props;
+  const { allTweet, deleteTweet, editTweet, valueEditTweet, value } = props;
   if (!allTweet || allTweet.length === 0) {
     return (
       <div className="list-tweet-null">
@@ -22,6 +22,7 @@ export default function ListTweet(props) {
             deleteTweet={deleteTweet}
             editTweet={editTweet}
             valueEditTweet={valueEditTweet}
+            value={value}
           />
         </Grid>
       ))}
